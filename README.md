@@ -1,66 +1,15 @@
-## Foundry
+# LnM Custom Cross-Chain ERC20 TOKEN
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Prepare
 
-Foundry consists of:
+SOURCE CHAIN
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+1. Deploy CCIPCustomTokenSender at Mumbai
+   1. ROUTER_ADDRESS: `0x0BF3dE8c5D3e8A2B34D2BEeB17ABfCeBaf363A59`
+   2. LINKTOKEN_ADDRESS: `0x779877A7B0D9E8603169DdbD7836e478b4624789`
+2. Whitelist the destination-chain-selector calling the `whitelistChain(uint64)` function
+   1. fuji-chain-selector: 14767482510784806043
+3. Fund CCIPCustomTokenSender with 1 Link token and 1000 BCC-LnM token.\
+4. Run `transferTokensPayLinkToken(uint64,address,address,address,uint256)`
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+DESTINATION CHAIN
