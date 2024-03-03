@@ -1,9 +1,20 @@
 # LnM Custom Cross-Chain ERC20 TOKEN
 
+<p align="center">
+<img src="./lnm.png" width="400" alt="puppy-raffle">
+<br/>
+
+
 A few days ago, I concluded my set of Masterclasses named [Crafting CCIP](https://github.com/Blockitus/crafting-ccip). The journey explains how the Chainlink Cross Chain Interoperability Protocol works and how we can build Cross-Chain Decentralized Apps (CC-DAPPS). These are the new types of DApps that will revolutionize the market by transferring value from one chain to another. Inspired by this, I had the idea 💡 to develop a simple Custom Cross-Chain ERC20 token. The distinctive feature of this token is that it enables the seamless flow of value between different chains.
 
-To see all the documentation behind this Example of Protocol you can read my blog on [Medium]()
-We are going to use this repo for implementing purpose. 
+To see all the documentation behind this example of the protocol, you can read my blog on [Medium]().
+We are going to use this repository for implementation purposes.
+
+A possible representation of what we aim to build is?
+
+<p align="center">
+<img src="./scheme.png" width="400" alt="puppy-raffle">
+<br/>
 
 ## Requirements
 
