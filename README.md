@@ -7,7 +7,7 @@
 
 A few days ago, I concluded my set of Masterclasses named [Crafting CCIP](https://github.com/Blockitus/crafting-ccip). The journey explains how the Chainlink Cross Chain Interoperability Protocol works and how we can build Cross-Chain Decentralized Apps (CC-DAPPS). These are the new types of DApps that will revolutionize the market by transferring value from one chain to another. Inspired by this, I had the idea 💡 to develop a simple Custom Cross-Chain ERC20 token. The distinctive feature of this token is that it enables the seamless flow of value between different chains.
 
-To see all the documentation behind this example of the protocol, you can read my blog on [Medium]().
+To see all the documentation behind this example of the protocol, you can read my blog on [Medium](https://medium.com/@pyuris22/lnm-custom-cross-chain-erc20-token-98789bf03caf).
 We are going to use this repository for implementation purposes.
 
 A possible representation of what we aim to build is?
