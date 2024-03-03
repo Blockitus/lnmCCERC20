@@ -5,14 +5,16 @@ pragma solidity ^0.8.0;
 import {CCIPReceiver} from "@chainlink/contracts-ccip/src/v0.8/ccip/applications/CCIPReceiver.sol";
 import {Client} from "@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol";
 import {ChainsListerOperator} from "./ChainsListerOperator.sol";
+import {BCCLnM} from "./BCCLnM.sol";
 
 contract CCIPTokenAndDataReceiver is CCIPReceiver, ChainsListerOperator {
-    uint256 price;
+
+    BCCLnM public bccLnM;
 
     event MintCallSuccessfull(bytes4 function_selector);
 
-    constructor(address _router, uint256 _price) CCIPReceiver(_router) {
-        price = _price;
+    constructor(address _router, address _airdrop) CCIPReceiver(_router) {
+        bccLnM = new BCCLnM(_airdrop);
     }
 
     function _ccipReceive(
@@ -23,8 +25,9 @@ contract CCIPTokenAndDataReceiver is CCIPReceiver, ChainsListerOperator {
         onlyWhitelistedSenders(abi.decode(message.sender, (address))) 
         override 
     {   
-        bytes memory dataToCall = message.data;
-        
-        emit MintCallSuccessfull(bytes4(dataToCall));
+        bytes memory runMint = message.data;
+        (bool success, ) = address(bccLnM).call(runMint); 
+        require(success);
+        emit MintCallSuccessfull(bytes4(runMint));
     }
 }
