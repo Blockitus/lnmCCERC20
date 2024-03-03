@@ -13,7 +13,7 @@ remappings = [
 solc_version="0.8.0"
 
 [rpc_endpoints]
-ethereumSepolia = "${ETHEREUM_SEPOLIA_RPC_URL}"
+polygonMumbai = "${POLYGON_MUMBAI_RPC_URL}"
 avalancheFuji = "${AVALANCHE_FUJI_RPC_URL}"
 
 
